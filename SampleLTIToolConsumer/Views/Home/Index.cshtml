@@ -1,0 +1,97 @@
+﻿@model SampleLTIToolConsumer.Models.OAuthRequestViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#toolProviderLink').click(function() {
+                $('#entryForm').submit();
+                   });
+        });
+    </script>
+}
+
+<h2>Index</h2>
+
+<a href="#" id="toolProviderLink">View Tool</a>
+
+
+
+
+<form id="entryForm" method="post" action="@Model.TargetUrl">
+<input type="hidden" name="context_id" value="@Model.ContextId">
+<input type="hidden" name="context_label" value="@Model.ContextLabel">
+<input type="hidden" name="context_title" value="@Model.ContextTitle">
+<input type="hidden" name="context_type" value="@Model.ContextType">
+<input type="hidden" name="ext_lms" value="@Model.ExtLms">
+<input type="hidden" name="launch_presentation_document_target" value="@Model.LaunchPresentationDocumentTarget">
+<input type="hidden" name="launch_presentation_locale" value="@Model.LaunchPresentationLocale">
+<input type="hidden" name="launch_presentation_return_url" value="@Model.LaunchPresentationReturnUrl">
+<input type="hidden" name="lis_course_offering_sourcedid" value="@Model.LisCourseOfferingSourcedid">
+<input type="hidden" name="lis_course_section_sourcedid" value="@Model.LisCourseSectionSourcedid">
+<input type="hidden" name="lis_person_contact_email_primary" value="@Model.LisPersonContactEmailPrimary">
+<input type="hidden" name="lis_person_name_family" value="@Model.LisPersonNameFamily">
+<input type="hidden" name="lis_person_name_full" value="@Model.LisPersonNameFull">
+<input type="hidden" name="lis_person_name_given" value="@Model.LisPersonNameGiven">
+<input type="hidden" name="lti_message_type" value="@Model.LtiMessageType">
+<input type="hidden" name="lti_version" value="@Model.LtiVersion">
+<input type="hidden" name="oauth_callback" value="@Model.OauthCallback">
+<input type="hidden" name="oauth_consumer_key" value="@Model.OauthConsumerKey">
+<input type="hidden" name="oauth_nonce" value="@Model.OauthNonce">
+<input type="hidden" name="oauth_signature" value="@Model.OauthSignature">
+<input type="hidden" name="oauth_signature_method" value="@Model.OauthSignatureMethod">
+<input type="hidden" name="oauth_timestamp" value="@Model.OauthTimestamp">
+<input type="hidden" name="oauth_version" value="@Model.OauthVersion">
+<input type="hidden" name="resource_link_id" value="@Model.ResourceLinkId">
+<input type="hidden" name="resource_link_title" value="@Model.ResourceLinkTitle">
+<input type="hidden" name="tool_consumer_info_product_family_code" value="@Model.ToolConsumerInfoProductFamilyCode">
+<input type="hidden" name="tool_consumer_info_version" value="@Model.ToolConsumerInfoVersion">
+<input type="hidden" name="tool_consumer_instance_description" value="@Model.ToolConsumerInstanceDescription">
+<input type="hidden" name="tool_consumer_instance_guid" value="@Model.ToolConsumerInstanceGuid">
+<input type="hidden" name="tool_consumer_instance_name" value="@Model.ToolConsumerInstanceName">
+<input type="hidden" name="tool_consumer_instance_url" value="@Model.ToolConsumerInstanceUrl">
+<input type="hidden" name="user_id" value="@Model.UserId">
+
+</form>
+
+<br />
+
+<!--the following DIV is just for debugging purposes-->
+<div id="debugDisplay">
+    <div>context_id : @Model.ContextId</div>
+<div>context_label : @Model.ContextLabel</div>
+<div>context_title : @Model.ContextTitle</div>
+<div>context_type : @Model.ContextType</div>
+<div>ext_lms : @Model.ExtLms</div>
+<div>launch_presentation_document_target : @Model.LaunchPresentationDocumentTarget</div>
+<div>launch_presentation_locale : @Model.LaunchPresentationLocale</div>
+<div>launch_presentation_return_url : @Model.LaunchPresentationReturnUrl</div>
+<div>lis_course_offering_sourcedid : @Model.LisCourseOfferingSourcedid</div>
+<div>lis_course_section_sourcedid : @Model.LisCourseSectionSourcedid</div>
+<div>lis_person_contact_email_primary : @Model.LisPersonContactEmailPrimary</div>
+<div>lis_person_name_family : @Model.LisPersonNameFamily</div>
+<div>lis_person_name_full : @Model.LisPersonNameFull</div>
+<div>lis_person_name_given : @Model.LisPersonNameGiven</div>
+<div>lti_message_type : @Model.LtiMessageType</div>
+<div>lti_version : @Model.LtiVersion</div>
+<div>oauth_callback : @Model.OauthCallback</div>
+<div>oauth_consumer_key : @Model.OauthConsumerKey</div>
+<div>oauth_nonce : @Model.OauthNonce</div>
+<div>oauth_signature : @Model.OauthSignature</div>
+<div>oauth_signature_method : @Model.OauthSignatureMethod</div>
+<div>oauth_timestamp : @Model.OauthTimestamp</div>
+<div>oauth_version : @Model.OauthVersion</div>
+<div>resource_link_id : @Model.ResourceLinkId</div>
+<div>resource_link_title : @Model.ResourceLinkTitle</div>
+<div>tool_consumer_info_product_family_code : @Model.ToolConsumerInfoProductFamilyCode</div>
+<div>tool_consumer_info_version : @Model.ToolConsumerInfoVersion</div>
+<div>tool_consumer_instance_description : @Model.ToolConsumerInstanceDescription</div>
+<div>tool_consumer_instance_guid : @Model.ToolConsumerInstanceGuid</div>
+<div>tool_consumer_instance_name : @Model.ToolConsumerInstanceName</div>
+<div>tool_consumer_instance_url : @Model.ToolConsumerInstanceUrl</div>
+<div>user_id : @Model.UserId</div>
+</div>
