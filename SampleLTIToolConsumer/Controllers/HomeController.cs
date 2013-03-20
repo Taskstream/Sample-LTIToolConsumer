@@ -17,16 +17,16 @@ namespace SampleLTIToolConsumer.Controllers
         public ActionResult Index()
         {
             //get user information from SIS
-            var userId = "7777";
-            var userEmail = "glindsay@taskstream.com";
-            var userFirstName = "Gerrard";
-            var userLastName = "Lindsay";
-            var userFullName = "Gerrard Lindsay";
+            var userId = "USERID";
+            var userEmail = "user@tempuri.org";
+            var userFirstName = "John";
+            var userLastName = "Doe";
+            var userFullName = "John Doe";
 
             //get integration information from Tool Provider (e.g. TaskStream)
-            var targetUrl = "https://glindsay.murgler.org/SingleSignOn2/Login/atc6crcrca";
-            var consumerKey = "atc6crcrca";
-            var sharedSecret = "3b71e651e7cb4193bf63007996eff482";
+            var targetUrl = "https://www.tempuri.org/target/url";
+            var consumerKey = "consumerkey";
+            var sharedSecret = "sharedsecret";
 
             var oauthBase = new OAuthBase();
 
